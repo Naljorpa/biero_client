@@ -1,0 +1,38 @@
+<!--
+Client de base pour jouer avec le service Web. On garde ça simple. Requête GET/PUT et manipulation de données en JS.
+Pour le plaisir, on ajoute un routeur (page.js) et un engin de gabarit (Mustache)!
+
+Utilisation de fetch avec les promesses, Youpi! (pas de xhr)
+
+https://github.com/janl/mustache.js/
+https://github.com/visionmedia/page.js
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Client biero (vanille)"</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        
+        <base href= "/">  <!-- Demande des ajustements en fonction de l'url de base -->
+        
+        <script type="module" src="./js/App.mjs"></script>
+    </head>
+    <body>
+      
+        <header class="top-nav">
+            <span class="logo"><a href="#!/accueil">Prototype Client Biero</a></span>
+            <span class="filler"></span>
+            <nav class="menuPrincipal">
+               <a href="#!/liste">Liste</a>
+            </nav>
+            Connecté : <input type="checkbox" name="log"> <span class="material-icons">done</span>
+        </header> 
+        <main class="app">
+            <!-- Point d'insertion des composants -->
+        </main>
+
+    </body>
+
+</html>
