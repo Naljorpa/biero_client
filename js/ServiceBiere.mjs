@@ -36,8 +36,10 @@ export default class ServiceBiere {
             bieres.sort((a,b)=>{
                 return a.note_moyenne.localeCompare(b.note_moyenne);
             })
-            let cinqMeilleuresBieres = bieres.slice(Math.max(bieres.length - 5));
-            fctRappel(cinqMeilleuresBieres)
+           // Je devais changer la structure du tableau retourné pour avoir un {data: Array()} au lieu d'un tableau non identifié. La formule du slice va chercher les cinq derniers élément du tableau organisé généré plus haut.
+            data = {data:bieres.slice(Math.max(bieres.length - 5))};
+            
+            fctRappel(data);
         });
     }
 
