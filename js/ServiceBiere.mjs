@@ -32,8 +32,12 @@ export default class ServiceBiere {
         .then(data => {
             // Comment ne garder que les 5 meilleures bières ?   
             //@todo...
-            console.log(data);
-            fctRappel(data)
+            let bieres = data.data;
+            bieres.sort((a,b)=>{
+                return a.note_moyenne.localeCompare(b.note_moyenne);
+            })
+            let cinqMeilleuresBieres = bieres.slice(Math.max(bieres.length - 5));
+            fctRappel(cinqMeilleuresBieres)
         });
     }
 
