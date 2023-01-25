@@ -1,0 +1,15 @@
+<h1>{{biere.nom}}</h1>
+<p>{{biere.description}}</p>
+<section class="commentaire">
+    <p>Courriel : <input class="courriel" name="courriel"></p>
+    <p>Commentaires : <textarea rows="4" cols="50"></textarea></p>
+    <p><button class="btnSoumettre">Envoyer le commentaire</button></p>
+</section>
+<section class="listecommentaires">
+    {{#commentaires}}
+    <article>
+        <p>{{commentaire}}</p>
+        <p>{{courriel}}</p>
+    </article>
+    {{/commentaires}}
+</section>

@@ -1,6 +1,6 @@
 * {
-    font-family: 'Roboto', sans-serif;
-
+    font-family: Montserat, sans-serif;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -15,8 +15,8 @@ Top Nav
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    height: 64px;
-    background-color: turquoise;
+    height: 100px;
+    background-color: rgb(15, 14, 6);
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
@@ -28,10 +28,36 @@ Top Nav
     margin-right: 32px;
 }
 
-.top-nav a {
+.top-nav a,  .top-nav .logo a{
     display: block;
     margin: 0px 8px;
     text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(223, 148, 37);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* inspiration pour le hover:  https://unused-css.com/blog/css-shake-animation/ */
+.top-nav a:hover{
+    animation:  shake 0.6s  ;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.top-nav .logo a{
+   display: flex;
+   align-items: center;
+ }
+
+.top-nav .logo img {
+   object-fit: cover;
 }
 /***************************
 * Main
@@ -40,10 +66,29 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 100vh;
+    background-color: rgb(252, 231, 205);
 }
 main aside {
     display: flex;
     flex-direction: column;
+}
+
+/**************************
+Section accueil
+******************************/
+
+.accueil{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.accueil h1{
+    font-size: 40px;
+}
+
+.accueil h2{
+    font-size: 30px;
 }
 
 /**************************
