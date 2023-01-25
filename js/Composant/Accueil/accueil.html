@@ -5,16 +5,23 @@
       <!-- Afficher les 5 meilleures bières, selon les notes moyennes-->
       <!-- Vous devez générer la vue requise à partir des informations retourner par le Webservice biero -->
       {{#data}}
-      <article class="card">
-         <picture>
-            <img src="/images/Pivovar_Chric_Pazdrat_Lahev.jpg" alt="">
-         </picture>
-         <h3>{{nom}}</h3>
-         <hr>
-         <p>Brasserie: <strong>{{brasserie}}</strong></p>
-         <p>Note moyenne: <strong>{{note_moyenne}}</strong></p>
-      </article>
+      <a href="/produit/{{id_biere}}">
+         <article class="card">
+            <picture>
+               <img src="/images/Pivovar_Chric_Pazdrat_Lahev.jpg" alt="">
+            </picture>
+            <h3>{{nom}}</h3>
+            <hr>
+            <p>Brasserie: <strong>{{brasserie}}</strong></p>
+            <p>Note moyenne: <strong>{{note_moyenne}}</strong></p>
+            <p>Nombre de votes: <strong>{{note_nombre}}</strong></p>
+         </article>
+      </a>
       {{/data}}
-    
+
    </section>
 </section>
+
+{# source des images de test:
+https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Pivovar_Chric_Pazdrat_Lahev.jpg/512px-Pivovar_Chric_Pazdrat_Lahev.jpg
+#}
