@@ -32,6 +32,7 @@ export default class ServiceBiere {
         .then(data => {
             // Comment ne garder que les 5 meilleures bières ?   
             //@todo...
+            console.log(data);
             fctRappel(data)
         });
     }

@@ -39,7 +39,6 @@ class App {
     }
 
     pageAccueil(){
-        console.log("Accueil")
         let composantAccueil = new AccueilComposant();
     }
 
