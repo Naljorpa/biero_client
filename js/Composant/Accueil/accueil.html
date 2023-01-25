@@ -1,9 +1,20 @@
 <section class="accueil" id="accueil">
    <h1>Bienvenue sur Biero client - Prototype</h1>
    <h2>Nos 5 meilleures bières</h2>
-   <section>
-        <!-- Afficher les 5 meilleures bières, selon les notes moyennes-->
-        <!-- Vous devez générer la vue requise à partir des informations retourner par le Webservice biero -->
-
+   <section class="section-meilleures">
+      <!-- Afficher les 5 meilleures bières, selon les notes moyennes-->
+      <!-- Vous devez générer la vue requise à partir des informations retourner par le Webservice biero -->
+      {{#data}}
+      <article class="card">
+         <picture>
+            <img src="/images/Pivovar_Chric_Pazdrat_Lahev.jpg" alt="">
+         </picture>
+         <h3>{{nom}}</h3>
+         <hr>
+         <p>Brasserie: <strong>{{brasserie}}</strong></p>
+         <p>Note moyenne: <strong>{{note_moyenne}}</strong></p>
+      </article>
+      {{/data}}
+    
    </section>
 </section>
