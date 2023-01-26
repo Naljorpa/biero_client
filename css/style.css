@@ -3,23 +3,24 @@
     box-sizing: border-box;
 }
 
-html, body {
-    margin:0px;
-    padding:0px;
+html,
+body {
+    margin: 0px;
+    padding: 0px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-h1{
+h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /****************************
 Top Nav
 ****************************/
-.top-nav{
+.top-nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -36,7 +37,8 @@ Top Nav
     margin-right: 32px;
 }
 
-.top-nav a,  .top-nav .logo a{
+.top-nav a,
+.top-nav .logo a {
     display: block;
     margin: 0px 8px;
     text-align: center;
@@ -47,29 +49,31 @@ Top Nav
 }
 
 /* inspiration pour le hover:  https://unused-css.com/blog/css-shake-animation/ */
-.top-nav a:hover{
-    animation:  shake 0.6s  ;
+.top-nav a:hover {
+    animation: shake 0.6s;
 }
 
 
 
-.top-nav .logo a{
-   display: flex;
-   align-items: center;
- }
+.top-nav .logo a {
+    display: flex;
+    align-items: center;
+}
 
 .top-nav .logo img {
-   object-fit: cover;
+    object-fit: cover;
 }
+
 /***************************
 * Main
 ****************************/
-main{
+main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: rgb(252, 231, 205);
 }
+
 main aside {
     display: flex;
     flex-direction: column;
@@ -83,17 +87,17 @@ main aside {
 Section accueil
 ******************************/
 
-.accueil{
+.accueil {
     padding-left: 40px;
     padding-right: 40px;
 }
 
-.accueil h1{
+.accueil h1 {
     font-size: 40px;
     text-align: center;
 }
 
-.accueil h2{
+.accueil h2 {
     text-align: center;
     font-size: 30px;
 }
@@ -101,47 +105,82 @@ Section accueil
 /**************************
 Section liste
 ******************************/
+.liste {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
 
-.liste a{
+.liste h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.liste a {
     color: black;
     font-size: 20px;
     font-weight: bold;
 }
 
-.liste .shaky:hover{
-    animation:  shake 0.6s  ;
+.liste a:hover {
+    text-decoration: underline;
 }
+
+.liste table{
+    border-spacing: 0 10px;
+    text-align: center;
+}
+
+.liste table th{
+    background-color: rgb(15, 14, 6);
+    color: rgb(223, 148, 37);
+    padding: 10px;
+    
+}
+
+.liste .material-icons{
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 
 /**************************
 Section catalogue
 ******************************/
-.catalogue{
+.catalogue {
     padding: 16px 16px;
     display: grid;
-    grid-template-columns : repeat(auto-fit, minmax(200px, .25fr));
-    gap:16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, .25fr));
+    gap: 16px;
     width: calc(95vw - 150px);
     box-sizing: border-box;
 }
+
 .catalogue .carte {
     height: 500px;
     overflow-y: hidden;
 }
+
 .catalogue .carte .contenu {
     text-overflow: ellipsis;
 }
-.catalogue .carte header{
+
+.catalogue .carte header {
     position: absolute;
     max-width: 200px;
 }
+
 .catalogue .carte img {
     object-fit: cover;
     max-width: 100%;
     opacity: .2;
 }
-.catalogue section{
+
+.catalogue section {
     min-width: 600px;
 }
+
 /************************
 Utilitaire
 ************************/
@@ -189,21 +228,35 @@ Cartes
 
 
 
-.section-meilleures{
+.section-meilleures {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    
+
 }
 
-.section-meilleures a{
+.section-meilleures a {
     color: black;
 }
 
 @keyframes shake {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0eg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
