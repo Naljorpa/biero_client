@@ -1,28 +1,34 @@
-<section id="liste">
+<section class="liste" id="liste">
     <h1>La liste de nos bières</h1>
-    <aside><p>Trier par : </p>
+    <aside>
+        <p>Trier par : </p>
         <!-- Comment faire pour trier ?-->
-       
+
 
     </aside>
     <section>
         <table>
             <tr>
-                <th><span class="material-icons btnNomASC">arrow_downward</span> Nom <span class="material-icons btnNomDESC">arrow_upward</span></th>
-                <th>Brasserie</th>
-                <th>Note</th>
+                <th><span class="material-icons btnNomASC">arrow_downward</span> Nom <span
+                        class="material-icons btnNomDESC">arrow_upward</span></th>
+                <th><span class="material-icons btnBrasserieASC">arrow_downward</span>Brasserie<span
+                        class="material-icons btnBrasserieDESC">arrow_upward</span></th>
+                <th><span class="material-icons btnNoteASC">arrow_downward</span>Note<span
+                        class="material-icons btnNoteDESC">arrow_upward</span></th>
                 <th>Nombre</th>
             </tr>
             {{#data}}
-            <tr>
-                <td>{{nom}}</td>
-                <td>{{brasserie}}</td>
-                <td>{{note_moyenne}}</td>
-                <td>{{note_nombre}}</td>
-            </tr>
+            
+                <tr>
+                    <td class="shaky" class="nom"><a href="/produit/{{id_biere}}">{{nom}}</a></td>
+                    <td>{{brasserie}}</td>
+                    <td>{{note_moyenne}}</td>
+                    <td>{{note_nombre}}</td>
+                </tr>
+            </a>
             {{/data}}
         </table>
 
- 
+
     </section>
- </section>
+</section>

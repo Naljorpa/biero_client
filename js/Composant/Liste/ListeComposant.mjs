@@ -26,21 +26,45 @@ export default class ListeComposant extends Composant{
     }
 
     AjouterListener(){
-        console.log("ajouter listener");
+
+         //bouton ascendant et descendant pour nom de la biere
         document.querySelector(".btnNomASC").addEventListener("click", (evt)=>{
-            console.log(evt)
             this.data.data.sort((a,b)=>{
                 return a.nom.localeCompare(b.nom);
             })
-            //console.log(this.data.data[0])
             this.setData(this.data, true);
         })
         document.querySelector(".btnNomDESC").addEventListener("click", (evt)=>{
-            console.log(evt)
             this.data.data.sort((a,b)=>{
                 return b.nom.localeCompare(a.nom);
             })
-            //console.log(this.data.data[0])
+            this.setData(this.data, true);
+        })
+        //bouton ascendant et descendant pour brasserie
+        document.querySelector(".btnBrasserieASC").addEventListener("click", (evt)=>{
+            this.data.data.sort((a,b)=>{
+                return a.brasserie.localeCompare(b.brasserie);
+            })
+            this.setData(this.data, true);
+        })
+        document.querySelector(".btnBrasserieDESC").addEventListener("click", (evt)=>{
+            this.data.data.sort((a,b)=>{
+                return b.brasserie.localeCompare(a.brasserie);
+            })
+            this.setData(this.data, true);
+        })
+          //bouton ascendant et descendant pour les notes
+          document.querySelector(".btnNoteASC").addEventListener("click", (evt)=>{
+            console.log(this.data.data);
+            this.data.data.sort((a,b)=>{
+                return a.note_moyenne.localeCompare(b.note_moyenne);
+            })
+            this.setData(this.data, true);
+        })
+        document.querySelector(".btnNoteDESC").addEventListener("click", (evt)=>{
+            this.data.data.sort((a,b)=>{
+                return b.note_moyenne.localeCompare(a.note_moyenne);
+            })
             this.setData(this.data, true);
         })
     }

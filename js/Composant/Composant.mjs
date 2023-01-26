@@ -54,7 +54,6 @@ export default class Composant {
 
     }
     #Afficher(){
-        console.log(this.tmplComposant);
         let chaineHTML = Mustache.render(this.tmplComposant, this.data);
         //console.log(chaineHTML);
         this.noeudParent.innerHTML = chaineHTML;
