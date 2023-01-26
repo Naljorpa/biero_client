@@ -7,6 +7,7 @@ html,
 body {
     margin: 0px;
     padding: 0px;
+    background-color: rgb(252, 231, 205);
 }
 
 a {
@@ -15,6 +16,11 @@ a {
 
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 0;
+}
+
+.err{
+    color: red;
 }
 
 /****************************
@@ -53,8 +59,6 @@ Top Nav
     animation: shake 0.6s;
 }
 
-
-
 .top-nav .logo a {
     display: flex;
     align-items: center;
@@ -71,7 +75,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: rgb(252, 231, 205);
+    
 }
 
 main aside {
@@ -90,6 +94,7 @@ Section accueil
 .accueil {
     padding-left: 40px;
     padding-right: 40px;
+    margin-top: 40px;
 }
 
 .accueil h1 {
@@ -109,6 +114,7 @@ Section liste
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
+    margin-top: 40px;
 }
 
 .liste h1 {
@@ -144,6 +150,74 @@ Section liste
     vertical-align: middle;
 }
 
+/**************************
+Section detail
+******************************/
+
+.biere-description{
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.biere-description h1{
+    font-size: 40px;
+}
+
+.biere-description div{
+    max-width: 600px;
+}
+
+.biere-description input, .biere-description textarea{
+    display: block;
+}
+
+.liste-commentaires{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.liste-commentaires article{
+    margin-bottom: 10px;
+}
+
+.liste-commentaires article small{
+    display: block;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+
+.btnSoumettre{
+    padding: 14px;
+    background-color: rgb(223, 148, 37);
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+}
+
+.btnSoumettre:hover{
+    background-color: rgb(15, 14, 6);
+    color: rgb(223, 148, 37);
+    cursor: pointer;
+}
+
+.boite-commentaire p{
+    margin: 0;
+}
+
+.boite-commentaire{
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
 
 /**************************
 Section catalogue

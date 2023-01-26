@@ -30,11 +30,9 @@ export default class ServiceBiere {
         fetch(this.api_url+"biere")
         .then(reponse=> reponse.json())
         .then(data => {
-            // Comment ne garder que les 5 meilleures bières ?   
-            //@todo...
             let bieres = data.data;
             bieres.sort((a,b)=>{
-                return a.note_moyenne.localeCompare(b.note_moyenne);
+                return a.note_moyenne - b.note_moyenne;
             })
            // Je devais changer la structure du tableau retourné pour avoir un {data: Array()} au lieu d'un tableau non identifié. La formule du slice va chercher les cinq derniers élément du tableau organisé généré plus haut.
             data = {data:bieres.slice(Math.max(bieres.length - 5))};

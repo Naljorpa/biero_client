@@ -9,12 +9,10 @@ export default class ListeComposant extends Composant{
         let pathGabarit ="./js/Composant/Liste/liste.html";
         super(data, pathGabarit);
         this.noeudParent = document.querySelector(".app");
-        console.log(data)
         
         if(!data){
             this.getBieres();
         }else{
-            console.log(data);
             this.setData(data, true); 
         }
 
@@ -57,13 +55,13 @@ export default class ListeComposant extends Composant{
           document.querySelector(".btnNoteASC").addEventListener("click", (evt)=>{
             console.log(this.data.data);
             this.data.data.sort((a,b)=>{
-                return a.note_moyenne.localeCompare(b.note_moyenne);
+                return a.note_moyenne - b.note_moyenne;
             })
             this.setData(this.data, true);
         })
         document.querySelector(".btnNoteDESC").addEventListener("click", (evt)=>{
             this.data.data.sort((a,b)=>{
-                return b.note_moyenne.localeCompare(a.note_moyenne);
+                return b.note_moyenne - a.note_moyenne;
             })
             this.setData(this.data, true);
         })

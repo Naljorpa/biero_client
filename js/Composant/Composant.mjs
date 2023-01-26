@@ -18,7 +18,6 @@ export default class Composant {
      */
     setData(data, bDirty){
         this.data = data;
-        console.log(this.data);
         this.AfficherTemplate();
     }
 
@@ -57,9 +56,9 @@ export default class Composant {
         let chaineHTML = Mustache.render(this.tmplComposant, this.data);
         //console.log(chaineHTML);
         this.noeudParent.innerHTML = chaineHTML;
-        if(this.AjouterListener)
+        if(this.ajouterListener)
         {
-            this.AjouterListener();
+            this.ajouterListener();
         } 
         return chaineHTML;
     }

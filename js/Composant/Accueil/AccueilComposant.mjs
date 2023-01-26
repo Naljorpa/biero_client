@@ -16,8 +16,6 @@ export default class AccueilComposant extends Composant {
 
     getBieres() {
         ServiceBiere.getListeDesMeilleuresBieres(this.setData.bind(this));
-        //ServiceBiere.getListeBieres(this.setData.bind(this));
-
     }
 
 
