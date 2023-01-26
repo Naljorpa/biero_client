@@ -23,7 +23,7 @@ export default class ListeComposant extends Composant{
 
     }
 
-    AjouterListener(){
+    ajouterListener(){
 
          //bouton ascendant et descendant pour nom de la biere
         document.querySelector(".btnNomASC").addEventListener("click", (evt)=>{
@@ -53,7 +53,6 @@ export default class ListeComposant extends Composant{
         })
           //bouton ascendant et descendant pour les notes
           document.querySelector(".btnNoteASC").addEventListener("click", (evt)=>{
-            console.log(this.data.data);
             this.data.data.sort((a,b)=>{
                 return a.note_moyenne - b.note_moyenne;
             })

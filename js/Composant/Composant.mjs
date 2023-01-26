@@ -26,13 +26,10 @@ export default class Composant {
     }
 
     AfficherTemplate(){
-        //console.log(this.tmplComposant)
         if(this.tmplComposant){
-            //console.log("afficher")
             this.#Afficher();
         }
         else{
-            //console.log("charge")
             this.ChargeTemplate();
         }
 
@@ -43,18 +40,14 @@ export default class Composant {
             .then(reponse => reponse.text())
             .then(tmpl => {
                 this.tmplComposant = tmpl
-                //console.log(this.tmplComposant);
                 if(this.data){
-                    //console.log(this.data)
                     this.#Afficher();
                 }
             });
-
-
     }
+
     #Afficher(){
         let chaineHTML = Mustache.render(this.tmplComposant, this.data);
-        //console.log(chaineHTML);
         this.noeudParent.innerHTML = chaineHTML;
         if(this.ajouterListener)
         {

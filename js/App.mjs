@@ -13,7 +13,7 @@
  */
  
 import ServiceBiere from './ServiceBiere.mjs';
-import Affichage from './Affichage.mjs';
+
 import page from "//unpkg.com/page/page.mjs";
 import ListeComposant from './Composant/Liste/ListeComposant.mjs';
 import AccueilComposant from './Composant/Accueil/AccueilComposant.mjs';
