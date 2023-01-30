@@ -17,12 +17,13 @@ export default class ListeComposant extends Composant{
         }
 
     }
-
+    // active la fonction qui recupere la liste des bières de la classe ServiceBiere
     getBieres(){
         ServiceBiere.getListeBieres(this.setData.bind(this));
 
     }
 
+    // Ajoute les fonctionnalité des boutons ascendant et descendant
     ajouterListener(){
 
          //bouton ascendant et descendant pour nom de la biere

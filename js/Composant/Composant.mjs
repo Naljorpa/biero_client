@@ -25,6 +25,7 @@ export default class Composant {
         return this.data;
     }
 
+    // Affiche le template de la page ou bien va le chercher 
     AfficherTemplate(){
         if(this.tmplComposant){
             this.#Afficher();
@@ -35,6 +36,7 @@ export default class Composant {
 
     }
 
+    // Charge le gabarit de la gabarit 
     ChargeTemplate(){
         fetch(this.gabarit)
             .then(reponse => reponse.text())
@@ -46,6 +48,7 @@ export default class Composant {
             });
     }
 
+    // La fonction spécifique qui se charge d'afficher le template dans la page et ajoute les listeners nécessaires
     #Afficher(){
         let chaineHTML = Mustache.render(this.tmplComposant, this.data);
         this.noeudParent.innerHTML = chaineHTML;

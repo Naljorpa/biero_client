@@ -19,10 +19,10 @@ import ListeComposant from './Composant/Liste/ListeComposant.mjs';
 import AccueilComposant from './Composant/Accueil/AccueilComposant.mjs';
 import BiereComposant from './Composant/Biere/BiereComposant.mjs';
 
-
 class App {
 
     constructor(){
+        
         this._app = document.querySelector(".app");
         
         page("/", this.pageAccueil.bind(this));
@@ -46,11 +46,10 @@ class App {
     pageDetail(ctx){
         let detail = new BiereComposant(ctx.params.id)
     }
-
     
-    afficherBiere(bieres){
-        console.log(bieres);
-     }
+    // afficherBiere(bieres){
+    //     console.log(bieres);
+    //  }
  
 }
 new App();
